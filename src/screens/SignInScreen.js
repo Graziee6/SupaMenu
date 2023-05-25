@@ -7,7 +7,9 @@ import {
 } from "react-native";
 import React from "react";
 import * as Font from "expo-font";
+import { FontAwesome } from "@expo/vector-icons";
 
+import colors from "../config/colors";
 import { GlobalStyles } from "../config/globalStyles";
 
 export default class LoginScreen extends React.Component {
@@ -33,7 +35,7 @@ export default class LoginScreen extends React.Component {
   render() {
     if (this.state.fontsLoaded) {
       return (
-        <View style={[GlobalStyles.loginPage]}>
+        <View style={GlobalStyles.loginPage}>
           <View style={GlobalStyles.loginDiv}>
             <View style={[GlobalStyles.logo, GlobalStyles.flexDiv]}>
               <Text
@@ -61,7 +63,7 @@ export default class LoginScreen extends React.Component {
                 Welcome ...
               </Text>
               <Text style={[GlobalStyles.subheader, GlobalStyles.all]}>
-                Please fill in the information
+                Sign in to continue
               </Text>
             </View>
 
@@ -69,27 +71,21 @@ export default class LoginScreen extends React.Component {
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Full Name"
+                  placeholder="Your Email"
                 />
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Phone Number"
-                />
-                <TextInput
-                  style={GlobalStyles.formField}
-                  placeholder="Your email"
+                  placeholder="Password"
                 />
               </View>
 
-              <View style={GlobalStyles.btn}>
+              <View style={[GlobalStyles.btn, GlobalStyles.btnPos]}>
                 <TouchableOpacity
-                  style={GlobalStyles.button}
+                  style={[GlobalStyles.button, GlobalStyles.formBtnColors]}
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={[GlobalStyles.all, GlobalStyles.btnText]}>
-                    Proceed
-                  </Text>
+                  <Text style={GlobalStyles.btnText}>Sign in</Text>
                 </TouchableOpacity>
               </View>
 
@@ -99,28 +95,59 @@ export default class LoginScreen extends React.Component {
                   <Text>OR</Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
-                <Text style={[GlobalStyles.text, GlobalStyles.all]}>
-                  If you have a PMG account
-                </Text>
               </View>
+            </View>
 
-              <View style={GlobalStyles.btn}>
-                <TouchableOpacity
-                  style={GlobalStyles.button}
-                  color="#ec9706"
-                  onPress={() => {}}
-                >
-                  <Text style={[GlobalStyles.all, GlobalStyles.btnText]}>
-                    Sign in
-                  </Text>
-                </TouchableOpacity>
-
-                <View style={[GlobalStyles.flexDiv, GlobalStyles.centerDiv]}>
-                  <Text>Don't have an account?</Text>
-                  <Text style={[styles.line2, GlobalStyles.logoBrightPart]}>
-                    Register
-                  </Text>
+            <View
+              style={[
+                GlobalStyles.btn,
+                GlobalStyles.btnPos,
+                GlobalStyles.shiftDiv,
+              ]}
+            >
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="google"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
                 </View>
+                <Text>Login with Google</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="facebook"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
+                </View>
+                <Text>Login with Facebook</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={[GlobalStyles.centerDiv, GlobalStyles.shiftDiv]}>
+              <Text style={[GlobalStyles.logoBrightPart, { marginTop: 12 }]}>
+                Forgot password?
+              </Text>
+              <View style={[GlobalStyles.flexDiv]}>
+                <Text>Don't have an account?</Text>
+                <Text style={[GlobalStyles.line2, GlobalStyles.logoBrightPart]}>
+                  Register
+                </Text>
               </View>
             </View>
           </View>
