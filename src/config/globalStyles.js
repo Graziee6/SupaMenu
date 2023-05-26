@@ -55,6 +55,9 @@ const GlobalStyles = StyleSheet.create({
   fullWidth: {
     width: "100%",
   },
+  grayText:{
+    color:colors.secondaryDark
+  },
   icon: {
     marginRight: 24,
   },
@@ -95,13 +98,27 @@ const GlobalStyles = StyleSheet.create({
   line2: {
     marginLeft: 12,
   },
+  mediumFont: {
+    fontWeight: 500,
+  },
   options: {
     alignItems: "center",
     justifyContent: "center",
     marginTop: 16,
   },
+  orangeIcon: {
+    color: colors.mainBckg,
+  },
   orDiv: {
     flexDirection: "row",
+  },
+  searchBar: {
+    backgroundColor: colors.bright,
+    height: 50,
+    width: "85%",
+    borderRadius: 50,
+    position: "absolute",
+    top: 120,
   },
   shiftDiv: {
     bottom: 24,
