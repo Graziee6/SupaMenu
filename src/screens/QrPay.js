@@ -45,7 +45,7 @@ export default class QrPay extends React.Component {
             <TextInput placeholder="Search for your preferred restaurant" />
           </View>
 
-          <Text>or</Text>
+          <Text style={[GlobalStyles.bold, GlobalStyles.grayText]}>or</Text>
 
           <Image
             source={require("./../../assets/qrCode.png")}
@@ -53,7 +53,11 @@ export default class QrPay extends React.Component {
           />
 
           <Text
-            style={[GlobalStyles.grayText, { textTransform: "capitalize" }]}
+            style={[
+              GlobalStyles.grayText,
+              { textTransform: "capitalize" },
+              GlobalStyles.bold,
+            ]}
           >
             scan, pay & enjoy
           </Text>

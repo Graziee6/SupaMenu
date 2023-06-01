@@ -57,10 +57,10 @@ export default class LoginScreen extends React.Component {
             </View>
 
             <View style={GlobalStyles.formHeader}>
-              <Text style={[GlobalStyles.welcome, GlobalStyles.all]}>
+              <Text style={[GlobalStyles.welcome, GlobalStyles.bold]}>
                 Welcome ...
               </Text>
-              <Text style={[GlobalStyles.subheader, GlobalStyles.all]}>
+              <Text style={[GlobalStyles.subheader, GlobalStyles.bold]}>
                 Please fill in the information
               </Text>
             </View>
@@ -87,7 +87,7 @@ export default class LoginScreen extends React.Component {
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={[GlobalStyles.all, GlobalStyles.btnText]}>
+                  <Text style={[GlobalStyles.bold, GlobalStyles.btnText]}>
                     Proceed
                   </Text>
                 </TouchableOpacity>
@@ -99,7 +99,7 @@ export default class LoginScreen extends React.Component {
                   <Text>OR</Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
-                <Text style={[GlobalStyles.text, GlobalStyles.all]}>
+                <Text style={[GlobalStyles.text, GlobalStyles.bold]}>
                   If you have a PMG account
                 </Text>
               </View>
@@ -110,14 +110,14 @@ export default class LoginScreen extends React.Component {
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={[GlobalStyles.all, GlobalStyles.btnText]}>
+                  <Text style={[GlobalStyles.bold, GlobalStyles.btnText]}>
                     Sign in
                   </Text>
                 </TouchableOpacity>
 
                 <View style={[GlobalStyles.flexDiv, GlobalStyles.centerDiv]}>
                   <Text>Don't have an account?</Text>
-                  <Text style={[styles.line2, GlobalStyles.logoBrightPart]}>
+                  <Text style={[GlobalStyles.line2, GlobalStyles.logoBrightPart]}>
                     Register
                   </Text>
                 </View>

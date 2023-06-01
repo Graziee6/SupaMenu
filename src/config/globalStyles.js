@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import colors from "./../config/colors";
 
 const GlobalStyles = StyleSheet.create({
-  bold: { fontFamily: "Poppins-Bold" },
+  bold: { fontWeight: 700 },
   formBtnColors: {
     color: colors.bright,
     backgroundColor: colors.mainBckg,
@@ -15,14 +15,12 @@ const GlobalStyles = StyleSheet.create({
   btnText: {
     color: colors.bright,
     textTransform: "capitalize",
-    fontWeight: "700",
     fontSize: 18,
   },
   button: {
     width: "90%",
     height: 65,
     borderRadius: 5,
-    fontFamily: "Poppins-Regular",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -36,11 +34,10 @@ const GlobalStyles = StyleSheet.create({
     borderColor: colors.secondaryDark,
     height: 55,
     width: "90%",
-    borderWidth: 2,
+    borderWidth: 1,
     margin: 10,
     paddingLeft: 10,
     borderRadius: 5,
-    fontFamily: "Poppins-Regular",
   },
   formFields: {
     justifyContent: "center",
@@ -50,13 +47,12 @@ const GlobalStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     alignContent: "center",
-    fontFamily: "Poppins-Regular",
   },
   fullWidth: {
     width: "100%",
   },
-  grayText:{
-    color:colors.secondaryDark
+  grayText: {
+    color: colors.secondaryDark,
   },
   icon: {
     marginRight: 24,
@@ -76,16 +72,12 @@ const GlobalStyles = StyleSheet.create({
   logo: {
     justifyContent: "center",
     paddingBottom: 18,
-    fontFamily: "Poppins-Regular",
   },
   logoBlackPart: {
     color: colors.black,
-    fontWeight: 700,
-    fontFamily: "Poppins-Regular",
   },
   logoBrightPart: {
     color: colors.mainBckg,
-    fontWeight: 700,
   },
   logoSize: { fontSize: 50 },
   line: {
@@ -133,8 +125,6 @@ const GlobalStyles = StyleSheet.create({
     paddingBottom: 12,
     color: colors.secondaryDark,
     fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Poppins-Regular",
   },
   text: {
     marginTop: 24,
@@ -143,8 +133,6 @@ const GlobalStyles = StyleSheet.create({
     paddingBottom: 8,
     color: colors.darkBlue,
     fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Poppins-Regular",
   },
 });
 
