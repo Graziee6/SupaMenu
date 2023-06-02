@@ -52,6 +52,7 @@ export const GlobalStyles = StyleSheet.create({
   fullWidth: {
     width: "100%",
   },
+  fullHeight: { flex: 1 },
   grayText: {
     color: colors.secondaryDark,
   },
@@ -91,9 +92,6 @@ export const GlobalStyles = StyleSheet.create({
   },
   logoBlackPart: {
     color: colors.black,
-  },
-  logoBrightPart: {
-    color: colors.mainBckg,
   },
   logoSize: { fontSize: 50 },
   line: {
@@ -154,6 +152,31 @@ export const GlobalStyles = StyleSheet.create({
       paddingBottom: 8,
       color: colors.darkBlue,
       fontSize: 18,
+    },
+    orangeBackground: {
+      backgroundColor: colors.mainBckg,
+    },
+    orangeColor: {
+      color: colors.mainBckg,
+    },
+    orDiv: {
+      flexDirection: "row",
+    },
+    subheader: {
+      paddingBottom: 12,
+      color: colors.secondaryDark,
+      fontSize: 18,
+    },
+    text: {
+      marginTop: 24,
+    },
+    welcome: {
+      paddingBottom: 8,
+      color: colors.darkBlue,
+      fontSize: 18,
+    },
+    whiteText: {
+      color: colors.bright,
     },
   },
 });
