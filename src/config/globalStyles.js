@@ -26,19 +26,15 @@ export const GlobalStyles = StyleSheet.create({
   },
   centerDiv: { justifyContent: "center", alignItems: "center" },
   flexDiv: { flexDirection: "row" },
-  form: {
-    flex: 1,
-  },
   formField: {
     textTransform: "capitalize",
     borderColor: colors.secondaryDark,
     height: 55,
     width: "90%",
-    borderWidth: 2,
+    borderWidth: 1,
     margin: 10,
     paddingLeft: 10,
     borderRadius: 5,
-    fontFamily: "Poppins-Regular",
   },
   formFields: {
     justifyContent: "center",
@@ -104,79 +100,70 @@ export const GlobalStyles = StyleSheet.create({
   line2: {
     marginLeft: 12,
   },
-  mediumFont: {
-    fontWeight: 500,
+  mediumSize: {
+    fontSize: 15,
+  },
+  mediumWeight: {
+    fontWeight: "600",
   },
   options: {
     alignItems: "center",
     justifyContent: "center",
     marginTop: 16,
   },
-  orangeIcon: {
+  searchBar: {
+    backgroundColor: colors.bright,
+    height: 50,
+    width: "85%",
+    borderRadius: 50,
+    position: "absolute",
+    top: 120,
+  },
+  shiftDiv: {
+    bottom: 24,
+  },
+  socialBtn: {
+    color: colors.secondaryDark,
+    borderColor: colors.secondaryDark,
+    borderWidth: 1,
+    margin: 10,
+  },
+  subheader: {
+    paddingBottom: 12,
+    color: colors.secondaryDark,
+    fontSize: 18,
+  },
+  text: {
+    marginTop: 24,
+  },
+  welcome: {
+    paddingBottom: 8,
+    color: colors.darkBlue,
+    fontSize: 18,
+  },
+  orangeBackground: {
+    backgroundColor: colors.mainBckg,
+  },
+  orangeColor: {
     color: colors.mainBckg,
-    mediumSize: {
-      fontSize: 15,
-    },
-    mediumWeight: {
-      fontWeight: "600",
-    },
-    orDiv: {
-      flexDirection: "row",
-    },
-    searchBar: {
-      backgroundColor: colors.bright,
-      height: 50,
-      width: "85%",
-      borderRadius: 50,
-      position: "absolute",
-      top: 120,
-    },
-    shiftDiv: {
-      bottom: 24,
-    },
-    socialBtn: {
-      color: colors.secondaryDark,
-      borderColor: colors.secondaryDark,
-      borderWidth: 2,
-      margin: 10,
-    },
-    subheader: {
-      paddingBottom: 12,
-      color: colors.secondaryDark,
-      fontSize: 18,
-    },
-    text: {
-      marginTop: 24,
-    },
-    welcome: {
-      paddingBottom: 8,
-      color: colors.darkBlue,
-      fontSize: 18,
-    },
-    orangeBackground: {
-      backgroundColor: colors.mainBckg,
-    },
-    orangeColor: {
-      color: colors.mainBckg,
-    },
-    orDiv: {
-      flexDirection: "row",
-    },
-    subheader: {
-      paddingBottom: 12,
-      color: colors.secondaryDark,
-      fontSize: 18,
-    },
-    text: {
-      marginTop: 24,
-    },
-    welcome: {
-      paddingBottom: 8,
-      color: colors.darkBlue,
-      fontSize: 18,
-    },
-    whiteText: {
-      color: colors.bright,
-    },
+  },
+  orDiv: {
+    flexDirection: "row",
+  },
+  subheader: {
+    paddingBottom: 12,
+    color: colors.secondaryDark,
+    fontSize: 18,
+  },
+  text: {
+    marginTop: 24,
+  },
+  welcome: {
+    paddingBottom: 8,
+    color: colors.darkBlue,
+    fontSize: 18,
+  },
+  whiteText: {
+    color: colors.bright,
   },
 });

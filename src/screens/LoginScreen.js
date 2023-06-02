@@ -81,7 +81,7 @@ export default class LoginScreen extends React.Component {
 
               <View style={GlobalStyles.btn}>
                 <TouchableOpacity
-                  style={GlobalStyles.button}
+                  style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
                   onPress={() => {}}
                 >
@@ -89,7 +89,7 @@ export default class LoginScreen extends React.Component {
                     style={[
                       GlobalStyles.btnText,
                       GlobalStyles.boldFontFamily,
-                      GlobalStyles.letterSpac,
+                      GlobalStyles.letterSpace,
                     ]}
                   >
                     Proceed
@@ -117,16 +117,16 @@ export default class LoginScreen extends React.Component {
 
               <View style={GlobalStyles.btn}>
                 <TouchableOpacity
-                  style={GlobalStyles.button}
+                  style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
                   onPress={() => {}}
                 >
                   <Text
                     style={[
-                      ,
+                      
                       GlobalStyles.btnText,
                       GlobalStyles.boldFontFamily,
-                      GlobalStyles.letterSpac,
+                      GlobalStyles.letterSpace,
                     ]}
                   >
                     Sign in

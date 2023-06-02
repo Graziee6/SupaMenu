@@ -49,7 +49,7 @@ export default class LoginScreen extends React.Component {
               </Text>
               <Text
                 style={[
-                  GlobalStyles.logoBrightPart,
+                  GlobalStyles.orangeColor,
                   GlobalStyles.logoSize,
                   GlobalStyles.bold,
                 ]}
@@ -59,15 +59,15 @@ export default class LoginScreen extends React.Component {
             </View>
 
             <View style={GlobalStyles.formHeader}>
-              <Text style={[GlobalStyles.welcome, GlobalStyles.all]}>
+              <Text style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}>
                 Welcome ...
               </Text>
-              <Text style={[GlobalStyles.subheader, GlobalStyles.all]}>
+              <Text style={[GlobalStyles.subheader, GlobalStyles.grayText, GlobalStyles.appFontFamily]}>
                 Sign in to continue
               </Text>
             </View>
 
-            <View style={GlobalStyles.form}>
+            <View>
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
@@ -81,18 +81,18 @@ export default class LoginScreen extends React.Component {
 
               <View style={[GlobalStyles.btn, GlobalStyles.btnPos]}>
                 <TouchableOpacity
-                  style={[GlobalStyles.button, GlobalStyles.formBtnColors]}
+                  style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={GlobalStyles.btnText}>Sign in</Text>
+                  <Text style={[GlobalStyles.btnText, GlobalStyles.boldFontFamily, GlobalStyles.letterSpace]}>Sign in</Text>
                 </TouchableOpacity>
               </View>
 
               <View style={GlobalStyles.options}>
-                <View style={GlobalStyles.orDiv}>
+                <View style={GlobalStyles.flexDiv}>
                   <View style={GlobalStyles.line}></View>
-                  <Text>OR</Text>
+                  <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily, GlobalStyles.mediumWeight]}>OR</Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
               </View>
@@ -101,8 +101,6 @@ export default class LoginScreen extends React.Component {
             <View
               style={[
                 GlobalStyles.btn,
-                GlobalStyles.btnPos,
-                GlobalStyles.shiftDiv,
               ]}
             >
               <TouchableOpacity
@@ -139,13 +137,13 @@ export default class LoginScreen extends React.Component {
               </TouchableOpacity>
             </View>
 
-            <View style={[GlobalStyles.centerDiv, GlobalStyles.shiftDiv]}>
-              <Text style={[GlobalStyles.logoBrightPart, { marginTop: 12 }]}>
+            <View style={[GlobalStyles.centerDiv]}>
+              <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, { marginTop: 1 }]}>
                 Forgot password?
               </Text>
               <View style={[GlobalStyles.flexDiv]}>
-                <Text>Don't have an account?</Text>
-                <Text style={[GlobalStyles.line2, GlobalStyles.logoBrightPart]}>
+                <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily]}>Don't have an account?</Text>
+                <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, {marginLeft:2}]}>
                   Register
                 </Text>
               </View>
