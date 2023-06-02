@@ -41,7 +41,7 @@ export default class LoginScreen extends React.Component {
               </Text>
               <Text
                 style={[
-                  GlobalStyles.logoBrightPart,
+                  GlobalStyles.orangeColor,
                   GlobalStyles.logoSize,
                   GlobalStyles.bold,
                 ]}
@@ -88,7 +88,8 @@ export default class LoginScreen extends React.Component {
                   <Text
                     style={[
                       GlobalStyles.btnText,
-                      GlobalStyles.boldFontFamily,GlobalStyles.letterSpac
+                      GlobalStyles.boldFontFamily,
+                      GlobalStyles.letterSpac,
                     ]}
                   >
                     Proceed
@@ -121,9 +122,11 @@ export default class LoginScreen extends React.Component {
                   onPress={() => {}}
                 >
                   <Text
-                    style={[,
+                    style={[
+                      ,
                       GlobalStyles.btnText,
-                      GlobalStyles.boldFontFamily,GlobalStyles.letterSpac
+                      GlobalStyles.boldFontFamily,
+                      GlobalStyles.letterSpac,
                     ]}
                   >
                     Sign in
@@ -145,7 +148,7 @@ export default class LoginScreen extends React.Component {
                   </Text>
                   <Text
                     style={[
-                      GlobalStyles.logoBrightPart,
+                      GlobalStyles.orangeColor,
                       GlobalStyles.boldFontFamily,
                       GlobalStyles.letterSpace,
                       GlobalStyles.mediumSize,
