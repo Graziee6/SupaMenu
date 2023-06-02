@@ -1,14 +1,8 @@
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import React from "react";
 import * as Font from "expo-font";
 
-import { GlobalStyles } from "../config/globalStyles";
+import { GlobalStyles } from "../config/globalStyles.js";
 
 export default class LoginScreen extends React.Component {
   constructor(props) {
@@ -38,9 +32,9 @@ export default class LoginScreen extends React.Component {
             <View style={[GlobalStyles.logo, GlobalStyles.flexDiv]}>
               <Text
                 style={[
-                  GlobalStyles.bold,
                   GlobalStyles.logoBlackPart,
                   GlobalStyles.logoSize,
+                  GlobalStyles.bold,
                 ]}
               >
                 Supa
@@ -56,16 +50,20 @@ export default class LoginScreen extends React.Component {
               </Text>
             </View>
 
-            <View style={GlobalStyles.formHeader}>
-              <Text style={[GlobalStyles.welcome, GlobalStyles.bold]}>
-                Welcome ...
-              </Text>
-              <Text style={[GlobalStyles.subheader, GlobalStyles.bold]}>
-                Please fill in the information
-              </Text>
-            </View>
-
             <View style={GlobalStyles.form}>
+              <View style={GlobalStyles.formHeader}>
+                <Text
+                  style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}
+                >
+                  Welcome ...
+                </Text>
+                <Text
+                  style={[GlobalStyles.subheader, GlobalStyles.appFontFamily]}
+                >
+                  Please fill in the information
+                </Text>
+              </View>
+
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
@@ -87,7 +85,12 @@ export default class LoginScreen extends React.Component {
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={[GlobalStyles.bold, GlobalStyles.btnText]}>
+                  <Text
+                    style={[
+                      GlobalStyles.btnText,
+                      GlobalStyles.boldFontFamily,GlobalStyles.letterSpac
+                    ]}
+                  >
                     Proceed
                   </Text>
                 </TouchableOpacity>
@@ -99,7 +102,14 @@ export default class LoginScreen extends React.Component {
                   <Text>OR</Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
-                <Text style={[GlobalStyles.text, GlobalStyles.bold]}>
+                <Text
+                  style={[
+                    GlobalStyles.grayText,
+                    GlobalStyles.text,
+                    GlobalStyles.appFontFamily,
+                    GlobalStyles.mediumWeight,
+                  ]}
+                >
                   If you have a PMG account
                 </Text>
               </View>
@@ -110,14 +120,39 @@ export default class LoginScreen extends React.Component {
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text style={[GlobalStyles.bold, GlobalStyles.btnText]}>
+                  <Text
+                    style={[,
+                      GlobalStyles.btnText,
+                      GlobalStyles.boldFontFamily,GlobalStyles.letterSpac
+                    ]}
+                  >
                     Sign in
                   </Text>
                 </TouchableOpacity>
 
-                <View style={[GlobalStyles.flexDiv, GlobalStyles.centerDiv]}>
-                  <Text>Don't have an account?</Text>
-                  <Text style={[GlobalStyles.line2, GlobalStyles.logoBrightPart]}>
+                <View style={GlobalStyles.flexDiv}>
+                  <Text
+                    style={[
+                      GlobalStyles.grayText,
+                      GlobalStyles.appFontFamily,
+                      GlobalStyles.letterSpace,
+                      GlobalStyles.mediumSize,
+                      GlobalStyles.mediumWeight,
+                      GlobalStyles.littlePadding,
+                    ]}
+                  >
+                    Don't have an account?
+                  </Text>
+                  <Text
+                    style={[
+                      GlobalStyles.logoBrightPart,
+                      GlobalStyles.boldFontFamily,
+                      GlobalStyles.letterSpace,
+                      GlobalStyles.mediumSize,
+                      GlobalStyles.littlePadding,
+                      { marginLeft: 2 },
+                    ]}
+                  >
                     Register
                   </Text>
                 </View>

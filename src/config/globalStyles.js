@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 
-import colors from "./../config/colors";
+import colors from "./colors";
 
-const GlobalStyles = StyleSheet.create({
+export const GlobalStyles = StyleSheet.create({
+  appFontFamily: { fontFamily: "Poppins-Regular" },
   bold: { fontWeight: 700 },
-  formBtnColors: {
-    color: colors.bright,
-    backgroundColor: colors.mainBckg,
-  },
-  btnPos: {
+  boldFontFamily: { fontFamily: "Poppins-Bold" },
+  btn: {
+    marginTop: 16,
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -34,10 +34,11 @@ const GlobalStyles = StyleSheet.create({
     borderColor: colors.secondaryDark,
     height: 55,
     width: "90%",
-    borderWidth: 1,
+    borderWidth: 2,
     margin: 10,
     paddingLeft: 10,
     borderRadius: 5,
+    fontFamily: "Poppins-Regular",
   },
   formFields: {
     justifyContent: "center",
@@ -57,17 +58,32 @@ const GlobalStyles = StyleSheet.create({
   icon: {
     marginRight: 24,
   },
+  letterSpace: {
+    letterSpacing: 0.5,
+  },
+  line: {
+    height: 2,
+    width: 120,
+    backgroundColor: colors.secondaryDark,
+    marginTop: 10,
+    marginRight: 12,
+  },
+  line2: {
+    marginLeft: 12,
+  },
+  littlePadding: {
+    paddingTop: 5,
+  },
+  loginDiv: {
+    flex: 1,
+    backgroundColor: colors.bright,
+    top: 100,
+    borderRadius: 50,
+    paddingTop: 16,
+  },
   loginPage: {
     backgroundColor: colors.mainBckg,
     flex: 1,
-    justifyContent: "flex-end",
-  },
-  loginDiv: {
-    height: "85%",
-    backgroundColor: colors.bright,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingTop: 16,
   },
   logo: {
     justifyContent: "center",
@@ -100,40 +116,44 @@ const GlobalStyles = StyleSheet.create({
   },
   orangeIcon: {
     color: colors.mainBckg,
-  },
-  orDiv: {
-    flexDirection: "row",
-  },
-  searchBar: {
-    backgroundColor: colors.bright,
-    height: 50,
-    width: "85%",
-    borderRadius: 50,
-    position: "absolute",
-    top: 120,
-  },
-  shiftDiv: {
-    bottom: 24,
-  },
-  socialBtn: {
-    color: colors.secondaryDark,
-    borderColor: colors.secondaryDark,
-    borderWidth: 2,
-    margin: 10,
-  },
-  subheader: {
-    paddingBottom: 12,
-    color: colors.secondaryDark,
-    fontSize: 18,
-  },
-  text: {
-    marginTop: 24,
-  },
-  welcome: {
-    paddingBottom: 8,
-    color: colors.darkBlue,
-    fontSize: 18,
+    mediumSize: {
+      fontSize: 15,
+    },
+    mediumWeight: {
+      fontWeight: "600",
+    },
+    orDiv: {
+      flexDirection: "row",
+    },
+    searchBar: {
+      backgroundColor: colors.bright,
+      height: 50,
+      width: "85%",
+      borderRadius: 50,
+      position: "absolute",
+      top: 120,
+    },
+    shiftDiv: {
+      bottom: 24,
+    },
+    socialBtn: {
+      color: colors.secondaryDark,
+      borderColor: colors.secondaryDark,
+      borderWidth: 2,
+      margin: 10,
+    },
+    subheader: {
+      paddingBottom: 12,
+      color: colors.secondaryDark,
+      fontSize: 18,
+    },
+    text: {
+      marginTop: 24,
+    },
+    welcome: {
+      paddingBottom: 8,
+      color: colors.darkBlue,
+      fontSize: 18,
+    },
   },
 });
-
-export { GlobalStyles };
