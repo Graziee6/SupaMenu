@@ -1,0 +1,5 @@
+{
+    "fullName": "this.state.fullName",
+    "email": "this.state.email",
+    "password": "this.state.password"
+  }

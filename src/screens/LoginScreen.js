@@ -1,8 +1,16 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import * as Font from "expo-font";
+import { FontAwesome } from "@expo/vector-icons";
 
-import { GlobalStyles } from "../config/globalStyles.js";
+import colors from "../config/colors";
+import { GlobalStyles } from "../config/globalStyles";
 
 export default class LoginScreen extends React.Component {
   constructor(props) {
@@ -27,14 +35,14 @@ export default class LoginScreen extends React.Component {
   render() {
     if (this.state.fontsLoaded) {
       return (
-        <View style={[GlobalStyles.loginPage]}>
+        <View style={GlobalStyles.loginPage}>
           <View style={GlobalStyles.loginDiv}>
             <View style={[GlobalStyles.logo, GlobalStyles.flexDiv]}>
               <Text
                 style={[
+                  GlobalStyles.bold,
                   GlobalStyles.logoBlackPart,
                   GlobalStyles.logoSize,
-                  GlobalStyles.bold,
                 ]}
               >
                 Supa
@@ -50,115 +58,94 @@ export default class LoginScreen extends React.Component {
               </Text>
             </View>
 
-            <View style={GlobalStyles.form}>
-              <View style={GlobalStyles.formHeader}>
-                <Text
-                  style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}
-                >
-                  Welcome ...
-                </Text>
-                <Text
-                  style={[GlobalStyles.subheader, GlobalStyles.appFontFamily]}
-                >
-                  Please fill in the information
-                </Text>
-              </View>
+            <View style={GlobalStyles.formHeader}>
+              <Text style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}>
+                Welcome ...
+              </Text>
+              <Text style={[GlobalStyles.subheader, GlobalStyles.grayText, GlobalStyles.appFontFamily]}>
+                Sign in to continue
+              </Text>
+            </View>
 
+            <View>
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Full Name"
+                  placeholder="Your Email"
                 />
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Phone Number"
-                />
-                <TextInput
-                  style={GlobalStyles.formField}
-                  placeholder="Your email"
+                  placeholder="Password"
                 />
               </View>
 
-              <View style={GlobalStyles.btn}>
+              <View style={[GlobalStyles.btn, GlobalStyles.btnPos]}>
                 <TouchableOpacity
                   style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
                   onPress={() => {}}
                 >
-                  <Text
-                    style={[
-                      GlobalStyles.btnText,
-                      GlobalStyles.boldFontFamily,
-                      GlobalStyles.letterSpace,
-                    ]}
-                  >
-                    Proceed
-                  </Text>
+                  <Text style={[GlobalStyles.btnText, GlobalStyles.boldFontFamily, GlobalStyles.letterSpace]}>Sign in</Text>
                 </TouchableOpacity>
               </View>
 
               <View style={GlobalStyles.options}>
-                <View style={GlobalStyles.orDiv}>
+                <View style={GlobalStyles.flexDiv}>
                   <View style={GlobalStyles.line}></View>
-                  <Text>OR</Text>
+                  <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily, GlobalStyles.mediumWeight]}>OR</Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
-                <Text
-                  style={[
-                    GlobalStyles.grayText,
-                    GlobalStyles.text,
-                    GlobalStyles.appFontFamily,
-                    GlobalStyles.mediumWeight,
-                  ]}
-                >
-                  If you have a PMG account
-                </Text>
               </View>
+            </View>
 
-              <View style={GlobalStyles.btn}>
-                <TouchableOpacity
-                  style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
-                  color="#ec9706"
-                  onPress={() => {}}
-                >
-                  <Text
-                    style={[
-                      
-                      GlobalStyles.btnText,
-                      GlobalStyles.boldFontFamily,
-                      GlobalStyles.letterSpace,
-                    ]}
-                  >
-                    Sign in
-                  </Text>
-                </TouchableOpacity>
-
-                <View style={GlobalStyles.flexDiv}>
-                  <Text
-                    style={[
-                      GlobalStyles.grayText,
-                      GlobalStyles.appFontFamily,
-                      GlobalStyles.letterSpace,
-                      GlobalStyles.mediumSize,
-                      GlobalStyles.mediumWeight,
-                      GlobalStyles.littlePadding,
-                    ]}
-                  >
-                    Don't have an account?
-                  </Text>
-                  <Text
-                    style={[
-                      GlobalStyles.orangeColor,
-                      GlobalStyles.boldFontFamily,
-                      GlobalStyles.letterSpace,
-                      GlobalStyles.mediumSize,
-                      GlobalStyles.littlePadding,
-                      { marginLeft: 2 },
-                    ]}
-                  >
-                    Register
-                  </Text>
+            <View
+              style={[
+                GlobalStyles.btn,
+              ]}
+            >
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="google"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
                 </View>
+                <Text>Login with Google</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="facebook"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
+                </View>
+                <Text>Login with Facebook</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={[GlobalStyles.centerDiv]}>
+              <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, { marginTop: 1 }]}>
+                Forgot password?
+              </Text>
+              <View style={[GlobalStyles.flexDiv]}>
+                <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily]}>Don't have an account?</Text>
+                <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, {marginLeft:2}]}>
+                  Register
+                </Text>
               </View>
             </View>
           </View>
