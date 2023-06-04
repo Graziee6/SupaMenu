@@ -4,6 +4,11 @@ import colors from "./colors";
 
 export const GlobalStyles = StyleSheet.create({
   appFontFamily: { fontFamily: "Poppins-Regular" },
+  backDiv:{
+    width:30,
+    height:30,
+    borderRadius:10
+  },
   bold: { fontWeight: 700 },
   boldFontFamily: { fontFamily: "Poppins-Bold" },
   btn: {
@@ -45,10 +50,16 @@ export const GlobalStyles = StyleSheet.create({
     alignItems: "center",
     alignContent: "center",
   },
+  fullHeight: {
+    flex: 1,
+  },
   fullWidth: {
     width: "100%",
   },
   fullHeight: { flex: 1 },
+  lightGrayBackground: {
+    backgroundColor: colors.lightDark,
+  },
   grayText: {
     color: colors.secondaryDark,
   },
@@ -77,93 +88,118 @@ export const GlobalStyles = StyleSheet.create({
     top: 100,
     borderRadius: 50,
     paddingTop: 16,
-  },
-  loginPage: {
-    backgroundColor: colors.mainBckg,
-    flex: 1,
-  },
-  logo: {
-    justifyContent: "center",
-    paddingBottom: 18,
-  },
-  logoBlackPart: {
-    color: colors.black,
-  },
-  logoSize: { fontSize: 50 },
-  line: {
-    height: 2,
-    width: 120,
-    backgroundColor: colors.secondaryDark,
-    marginTop: 10,
-    marginRight: 12,
-  },
-  line2: {
-    marginLeft: 12,
-  },
-  mediumSize: {
-    fontSize: 15,
-  },
-  mediumWeight: {
-    fontWeight: "600",
-  },
-  options: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 16,
-  },
-  searchBar: {
-    backgroundColor: colors.bright,
-    height: 50,
-    width: "85%",
-    borderRadius: 50,
-    position: "absolute",
-    top: 120,
-  },
-  shiftDiv: {
-    bottom: 24,
-  },
-  socialBtn: {
-    color: colors.secondaryDark,
-    borderColor: colors.secondaryDark,
-    borderWidth: 1,
-    margin: 10,
-  },
-  subheader: {
-    paddingBottom: 12,
-    color: colors.secondaryDark,
-    fontSize: 18,
-  },
-  text: {
-    marginTop: 24,
-  },
-  welcome: {
-    paddingBottom: 8,
-    color: colors.darkBlue,
-    fontSize: 18,
-  },
-  orangeBackground: {
-    backgroundColor: colors.mainBckg,
-  },
-  orangeColor: {
-    color: colors.mainBckg,
-  },
-  orDiv: {
-    flexDirection: "row",
-  },
-  subheader: {
-    paddingBottom: 12,
-    color: colors.secondaryDark,
-    fontSize: 18,
-  },
-  text: {
-    marginTop: 24,
-  },
-  welcome: {
-    paddingBottom: 8,
-    color: colors.darkBlue,
-    fontSize: 18,
-  },
-  whiteText: {
-    color: colors.bright,
+    iconDiv: {
+      justifyContent: "space-around",
+      height: 80,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+
+      elevation: 5,
+    },
+    loginPage: {
+      backgroundColor: colors.mainBckg,
+      flex: 1,
+      justifyContent: "flex-end",
+    },
+
+    loginDiv: {
+      height: "85%",
+      backgroundColor: colors.bright,
+      borderTopLeftRadius: 30,
+      borderTopRightRadius: 30,
+      paddingTop: 16,
+    },
+    logo: {
+      justifyContent: "center",
+      paddingBottom: 18,
+    },
+    logoBlackPart: {
+      color: colors.black,
+    },
+    logoSize: { fontSize: 50 },
+    line: {
+      height: 2,
+      width: 120,
+      backgroundColor: colors.secondaryDark,
+      marginTop: 10,
+      marginRight: 12,
+    },
+    line2: {
+      marginLeft: 12,
+    },
+    mediumSize: {
+      fontSize: 15,
+    },
+    mediumWeight: {
+      fontWeight: "600",
+    },
+    options: {
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: 16,
+    },
+    searchBar: {
+      backgroundColor: colors.bright,
+      height: 50,
+      width: "85%",
+      borderRadius: 50,
+      position: "absolute",
+      top: 120,
+    },
+    shiftDiv: {
+      bottom: 24,
+    },
+    socialBtn: {
+      color: colors.secondaryDark,
+      borderColor: colors.secondaryDark,
+      borderWidth: 1,
+      margin: 10,
+    },
+    subheader: {
+      paddingBottom: 12,
+      color: colors.secondaryDark,
+      fontSize: 18,
+    },
+    text: {
+      marginTop: 24,
+    },
+    welcome: {
+      paddingBottom: 8,
+      color: colors.darkBlue,
+      fontSize: 18,
+    },
+    orangeBackground: {
+      backgroundColor: colors.mainBckg,
+    },
+    orangeColor: {
+      color: colors.mainBckg,
+    },
+    orDiv: {
+      flexDirection: "row",
+    },
+    subheader: {
+      paddingBottom: 12,
+      color: colors.secondaryDark,
+      fontSize: 18,
+    },
+    text: {
+      marginTop: 24,
+    },
+    welcome: {
+      paddingBottom: 8,
+      color: colors.darkBlue,
+      fontSize: 18,
+    },
+    whiteText: {
+      color: colors.bright,
+    },
+    whiteDiv: {
+      backgroundColor: colors.bright,
+    },
   },
 });
