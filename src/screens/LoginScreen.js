@@ -17,7 +17,28 @@ export default class LoginScreen extends React.Component {
     super(props);
     this.state = {
       fontsLoaded: false,
+      email:"",
+      password:""
     };
+  }
+
+  async login(){
+    try {
+      const email = this.state.email
+      const password = this.state.password
+
+      let result = await fetch("http://10.0.2.2:4000/login/", {
+        method:"POST",
+        body:JSON.stringify({
+          email, password
+        }),
+        headers:{"Content-Type":"application/json"}
+      })
+
+      result = await result.json();
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   async loadFonts() {
@@ -71,11 +92,12 @@ export default class LoginScreen extends React.Component {
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Your Email"
+                  placeholder="Your Email" onChangeText={(text)=> this.setState({email:text})}
                 />
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Password"
+                  placeholder="Password" onChangeText={(text)=>{this.setState({password
+                  :text})}}
                 />
               </View>
 
@@ -83,7 +105,9 @@ export default class LoginScreen extends React.Component {
                 <TouchableOpacity
                   style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
-                  onPress={() => {}}
+                  onPress={() => {
+                    this.login()
+                  }}
                 >
                   <Text style={[GlobalStyles.btnText, GlobalStyles.boldFontFamily, GlobalStyles.letterSpace]}>Sign in</Text>
                 </TouchableOpacity>

@@ -21,7 +21,7 @@ export default class Register extends React.Component {
       const email = this.state.email;
       const password = this.state.password;
 
-      let result = await fetch("http://10.0.2.2:4000/register/", {
+      let result = await fetch("http://10.0.2.2:4000/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

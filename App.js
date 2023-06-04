@@ -6,5 +6,5 @@ import LoginScreen from "./src/screens/LoginScreen";
 import QrPay from "./src/screens/QrPayScreen";
 
 export default function App() {
-  return <Register />;
+  return <LoginScreen />;
 }
