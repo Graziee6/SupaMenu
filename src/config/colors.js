@@ -5,5 +5,6 @@ export default {
   secondaryDark: "#333",
   darkBlue: "#00008B",
   mainOrange: "#ec9706",
-  lightDark:"#ccc"
+  lightDark:"#ccc",
+  lighterDark:"#eee"
 };

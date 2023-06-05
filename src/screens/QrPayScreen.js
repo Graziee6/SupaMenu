@@ -29,7 +29,7 @@ export default class QrPay extends React.Component {
   render() {
     if (this.state.fontsLoaded) {
       return (
-        <View style={[GlobalStyles.loginPage, GlobalStyles.centerDiv]}>
+        <View style={[GlobalStyles.orangeBackground, GlobalStyles.centerDiv, GlobalStyles.fullHeight]}>
           <View
             style={[
               GlobalStyles.centerDiv,
@@ -40,7 +40,7 @@ export default class QrPay extends React.Component {
             <FontAwesome
               name="search"
               size={24}
-              style={[GlobalStyles.icon, GlobalStyles.orangeIcon]}
+              style={[GlobalStyles.icon, GlobalStyles.orangeColor]}
             />
             <TextInput placeholder="Search for your preferred restaurant" />
           </View>
