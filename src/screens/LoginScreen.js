@@ -7,21 +7,44 @@ import {
 } from "react-native";
 import React from "react";
 import * as Font from "expo-font";
+import { FontAwesome } from "@expo/vector-icons";
 
 import colors from "../config/colors";
+import { GlobalStyles } from "../config/globalStyles";
 
 export default class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       fontsLoaded: false,
+      email:"",
+      password:""
     };
+  }
+
+  async login(){
+    try {
+      const email = this.state.email
+      const password = this.state.password
+
+      let result = await fetch("http://10.0.2.2:4000/login/", {
+        method:"POST",
+        body:JSON.stringify({
+          email, password
+        }),
+        headers:{"Content-Type":"application/json"}
+      })
+
+      result = await result.json();
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   async loadFonts() {
     await Font.loadAsync({
       "Poppins-Regular": require("./../../assets/fonts/Poppins-Regular.otf"),
-      "Poppins-Bold": require("./../../assets/fonts/Poppins-Bold.otf")
+      "Poppins-Bold": require("./../../assets/fonts/Poppins-Bold.otf"),
     });
     this.setState({ fontsLoaded: true });
   }
@@ -33,64 +56,120 @@ export default class LoginScreen extends React.Component {
   render() {
     if (this.state.fontsLoaded) {
       return (
-        <View style={[styles.loginPage]}>
-          <View style={styles.loginDiv}>
-            <View style={[styles.logo, styles.flexDiv]}>
-              <Text style={[styles.logoBlackPart, styles.logoSize, styles.bold]}>Supa</Text>
-              <Text style={[styles.logoBrightPart, styles.logoSize, styles.bold]}>Menu</Text>
+        <View style={GlobalStyles.loginPage}>
+          <View style={GlobalStyles.loginDiv}>
+            <View style={[GlobalStyles.logo, GlobalStyles.flexDiv]}>
+              <Text
+                style={[
+                  GlobalStyles.bold,
+                  GlobalStyles.logoBlackPart,
+                  GlobalStyles.logoSize,
+                ]}
+              >
+                Supa
+              </Text>
+              <Text
+                style={[
+                  GlobalStyles.orangeColor,
+                  GlobalStyles.logoSize,
+                  GlobalStyles.bold,
+                ]}
+              >
+                Menu
+              </Text>
             </View>
 
-            <View style={styles.form}>
-              <View style={styles.formHeader}>
-                <Text style={[styles.welcome, styles.all]}>Welcome ...</Text>
-                <Text style={[styles.subheader, styles.all]}>
-                  Please fill in the information
-                </Text>
-              </View>
+            <View style={GlobalStyles.formHeader}>
+              <Text style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}>
+                Welcome ...
+              </Text>
+              <Text style={[GlobalStyles.subheader, GlobalStyles.grayText, GlobalStyles.appFontFamily]}>
+                Sign in to continue
+              </Text>
+            </View>
 
-              <View style={styles.formFields}>
-                <TextInput style={styles.formField} placeholder="Full Name" />
+            <View>
+              <View style={GlobalStyles.formFields}>
                 <TextInput
-                  style={styles.formField}
-                  placeholder="Phone Number"
+                  style={GlobalStyles.formField}
+                  placeholder="Your Email" onChangeText={(text)=> this.setState({email:text})}
                 />
-                <TextInput style={styles.formField} placeholder="Your email" />
+                <TextInput
+                  style={GlobalStyles.formField}
+                  placeholder="Password" onChangeText={(text)=>{this.setState({password
+                  :text})}}
+                />
               </View>
 
-              <View style={styles.btn}>
+              <View style={[GlobalStyles.btn, GlobalStyles.btnPos]}>
                 <TouchableOpacity
-                  style={styles.button}
+                  style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
-                  onPress={() => {}}
+                  onPress={() => {
+                    this.login()
+                  }}
                 >
-                  <Text style={[styles.all, styles.btnText]}>Proceed</Text>
+                  <Text style={[GlobalStyles.btnText, GlobalStyles.boldFontFamily, GlobalStyles.letterSpace]}>Sign in</Text>
                 </TouchableOpacity>
               </View>
 
-              <View style={styles.options}>
-                <View style={styles.orDiv}>
-                  <View style={styles.line}></View>
-                  <Text>OR</Text>
-                  <View style={[styles.line, styles.line2]}></View>
+              <View style={GlobalStyles.options}>
+                <View style={GlobalStyles.flexDiv}>
+                  <View style={GlobalStyles.line}></View>
+                  <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily, GlobalStyles.mediumWeight]}>OR</Text>
+                  <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
-                <Text style={[styles.text, styles.all]}>
-                  If you have a PMG account
+              </View>
+            </View>
+
+            <View
+              style={[
+                GlobalStyles.btn,
+              ]}
+            >
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="google"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
+                </View>
+                <Text>Login with Google</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  GlobalStyles.socialBtn,
+                  GlobalStyles.button,
+                  GlobalStyles.flexDiv,
+                ]}
+              >
+                <View>
+                <FontAwesome
+                  name="facebook"
+                  size={24}
+                  style={GlobalStyles.icon}
+                />
+                </View>
+                <Text>Login with Facebook</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={[GlobalStyles.centerDiv]}>
+              <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, { marginTop: 1 }]}>
+                Forgot password?
+              </Text>
+              <View style={[GlobalStyles.flexDiv]}>
+                <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily]}>Don't have an account?</Text>
+                <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, {marginLeft:2}]}>
+                  Register
                 </Text>
-              </View>
-
-              <View style={styles.btn}>
-                <TouchableOpacity
-                  style={styles.button}
-                  color="#ec9706"
-                  onPress={() => {}}
-                >
-                  <Text style={[styles.all, styles.btnText]}>Sign in</Text>
-                </TouchableOpacity>
-
-                <View style={styles.flexDiv}>
-                  <Text style={styles.all}>Don't have an account?</Text>
-                  <Text style={[styles.line2, styles.logoBrightPart, styles.all]}>Register</Text>
-                </View>
               </View>
             </View>
           </View>
@@ -101,114 +180,3 @@ export default class LoginScreen extends React.Component {
     }
   }
 }
-
-const styles = StyleSheet.create({
-  bold: { fontFamily: "Poppins-Bold" },
-  btn: {
-    marginTop: 16,
-    width: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  btnText: {
-    color: colors.bright,
-    textTransform: "capitalize",
-    fontWeight: "700",
-    fontSize: 18,
-  },
-  button: {
-    width: "90%",
-    height: 65,
-    backgroundColor: colors.mainBckg,
-    borderRadius: 5,
-    fontFamily: "Poppins-Regular",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  flexDiv: { flexDirection: "row" },
-  form: {
-    flex: 1,
-  },
-  formField: {
-    textTransform: "capitalize",
-    borderColor: colors.secondaryDark,
-    height: 55,
-    width: "90%",
-    borderWidth: 2,
-    margin: 10,
-    paddingLeft: 10,
-    borderRadius: 5,
-    fontFamily:"Poppins-Regular"
-  },
-  formFields: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  formHeader: {
-    justifyContent: "center",
-    alignItems: "center",
-    alignContent: "center",
-    fontFamily: "Poppins-Regular",
-  },
-  line: {
-    height: 2,
-    width: 120,
-    backgroundColor: colors.secondaryDark,
-    marginTop: 10,
-    marginRight: 12,
-  },
-  line2: {
-    marginLeft: 12,
-  },
-  loginDiv: {
-    flex: 1,
-    backgroundColor: colors.bright,
-    top: 100,
-    borderRadius: 50,
-    paddingTop: 16,
-  },
-  loginPage: {
-    backgroundColor: colors.mainBckg,
-    flex: 1,
-  },
-  logo: {
-    justifyContent: "center",
-    paddingBottom: 18,
-    fontFamily: "Poppins-Regular",
-  },
-  logoBlackPart: {
-    color: colors.black,
-    fontWeight: 700,
-    fontFamily: "Poppins-Regular",
-  },
-  logoBrightPart: {
-    color: colors.mainBckg,
-    fontWeight: 700,
-  },
-  logoSize: { fontSize: 50 },
-  options: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 16,
-  },
-  orDiv: {
-    flexDirection: "row",
-  },
-  subheader: {
-    paddingBottom: 12,
-    color: colors.secondaryDark,
-    fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Poppins-Regular",
-  },
-  text: {
-    marginTop: 24,
-  },
-  welcome: {
-    paddingBottom: 8,
-    color: colors.darkBlue,
-    fontSize: 18,
-    fontWeight: "bold",
-    fontFamily: "Poppins-Regular",
-  },
-});
