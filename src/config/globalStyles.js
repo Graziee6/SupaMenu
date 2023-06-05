@@ -12,14 +12,16 @@ export const GlobalStyles = StyleSheet.create({
   backDivSpacing: { paddingBottom: 24 },
   backDivBorder: { borderBottomColor: colors.lightDark, borderBottomWidth: 1 },
   boldFontFamily: { fontFamily: "Poppins-Bold" },
-  btn: {
-    marginTop: 16,
-    width: "100%",
+  blackDiv: {
+    backgroundColor: colors.black,
+  },
+  bold: { fontWeight: "700" },
+
+  btnPos: {
     justifyContent: "center",
     alignItems: "center",
   },
   btnText: {
-    color: colors.bright,
     textTransform: "capitalize",
     fontSize: 18,
   },
@@ -167,9 +169,17 @@ export const GlobalStyles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 16,
   },
-
   safeView: {
     marginTop: Platform.OS == "android" ? StatusBar.currentHeight : 10,
+  },
+  orangeBackground: {
+    backgroundColor: colors.mainBckg,
+  },
+  orangeIcon: {
+    color: colors.mainBckg,
+  },
+  orDiv: {
+    flexDirection: "row",
   },
   searchBar: {
     backgroundColor: colors.bright,
@@ -209,5 +219,11 @@ export const GlobalStyles = StyleSheet.create({
   },
   whiteDiv: {
     backgroundColor: colors.bright,
+  },
+  whiteBackground: {
+    backgroundColor: colors.bright,
+  },
+  whiteText: {
+    color: colors.bright,
   },
 });
