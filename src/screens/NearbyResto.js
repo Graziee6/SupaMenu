@@ -28,7 +28,7 @@ export default function NearbyResto() {
             GlobalStyles.centerDiv,
             GlobalStyles.lightGrayBackground,
             GlobalStyles.icon,
-            { marginLeft: 30 },
+            GlobalStyles.nearbyRestoPageLeftMargin,
           ]}
         >
           <FontAwesome
@@ -42,137 +42,119 @@ export default function NearbyResto() {
         </View>
       </View>
 
-      <Text style={[GlobalStyles.orangeColor, GlobalStyles.subheaderStyle]}>
-        Nearby Restaurant
-      </Text>
-
-      <View>
-        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
-          <TouchableOpacity
-            style={[
-              GlobalStyles.lighterGrayBackground,
-              GlobalStyles.nearbyRestoDiv,
-              GlobalStyles.mediumDiv,
-              GlobalStyles.nearbyRestoBradius,
-              GlobalStyles.flexDiv,
-              GlobalStyles.centerY,
-            ]}
-          >
-            <View>
-              <Image
-                source={require("../../assets/pizzer.jpeg")}
-                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
-              />
-            </View>
-            <View>
-              <Text
-                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
-              >
-                Choose Kigali
-              </Text>
-              <Text style={GlobalStyles.textPadding}>
-                World, African, Pizzeria, Coffee
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-
-        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
-          <TouchableOpacity
-            style={[
-              GlobalStyles.lighterGrayBackground,
-              GlobalStyles.nearbyRestoDiv,
-              GlobalStyles.mediumDiv,
-              GlobalStyles.nearbyRestoBradius,
-              GlobalStyles.flexDiv,
-              GlobalStyles.centerY,
-            ]}
-          >
-            <View>
-              <Image
-                source={require("../../assets/pizzer.jpeg")}
-                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
-              />
-            </View>
-            <View>
-              <Text
-                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
-              >
-                Choose Kigali
-              </Text>
-              <Text style={GlobalStyles.textPadding}>
-                World, African, Pizzeria, Coffee
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-
-        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
-          <TouchableOpacity
-            style={[
-              GlobalStyles.lighterGrayBackground,
-              GlobalStyles.nearbyRestoDiv,
-              GlobalStyles.mediumDiv,
-              GlobalStyles.nearbyRestoBradius,
-              GlobalStyles.flexDiv,
-              GlobalStyles.centerY,
-            ]}
-          >
-            <View>
-              <Image
-                source={require("../../assets/pizzer.jpeg")}
-                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
-              />
-            </View>
-            <View>
-              <Text
-                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
-              >
-                Choose Kigali
-              </Text>
-              <Text style={GlobalStyles.textPadding}>
-                World, African, Pizzeria, Coffee
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
-        <TouchableOpacity
+      <View
+        style={{
+          height: "70%",
+          justifyContent: "space-around",
+        }}
+      >
+        <Text
           style={[
-            GlobalStyles.lighterGrayBackground,
-            GlobalStyles.nearbyRestoDiv,
-            GlobalStyles.mediumDiv,
-            GlobalStyles.nearbyRestoBradius,
-            GlobalStyles.flexDiv,
-            GlobalStyles.centerY,
+            GlobalStyles.orangeColor,
+            GlobalStyles.nearbyRestoPageLeftMargin,
           ]}
         >
-          <View>
-            <Image
-              source={require("../../assets/pizzer.jpeg")}
-              style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
-            />
-          </View>
-          <View>
-            <Text style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}>
-              Choose Kigali
-            </Text>
-            <Text style={GlobalStyles.textPadding}>
-              World, African, Pizzeria, Coffee
-            </Text>
-          </View>
-        </TouchableOpacity>
+          Nearby Restaurant
+        </Text>
+        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
+          <TouchableOpacity
+            style={[
+              GlobalStyles.lighterGrayBackground,
+              GlobalStyles.nearbyRestoDiv,
+              GlobalStyles.mediumDiv,
+              GlobalStyles.nearbyRestoBradius,
+              GlobalStyles.flexDiv,
+              GlobalStyles.centerY,
+            ]}
+          >
+            <View>
+              <Image
+                source={require("../../assets/pizzer.jpeg")}
+                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
+              />
+            </View>
+            <View>
+              <Text
+                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
+              >
+                Choose Kigali
+              </Text>
+              <Text style={GlobalStyles.textPadding}>
+                World, African, Pizzeria, Coffee
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
+          <TouchableOpacity
+            style={[
+              GlobalStyles.lighterGrayBackground,
+              GlobalStyles.nearbyRestoDiv,
+              GlobalStyles.mediumDiv,
+              GlobalStyles.nearbyRestoBradius,
+              GlobalStyles.flexDiv,
+              GlobalStyles.centerY,
+            ]}
+          >
+            <View>
+              <Image
+                source={require("../../assets/pizzer.jpeg")}
+                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
+              />
+            </View>
+            <View>
+              <Text
+                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
+              >
+                Choose Kigali
+              </Text>
+              <Text style={GlobalStyles.textPadding}>
+                World, African, Pizzeria, Coffee
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumDiv]}>
+          <TouchableOpacity
+            style={[
+              GlobalStyles.lighterGrayBackground,
+              GlobalStyles.nearbyRestoDiv,
+              GlobalStyles.mediumDiv,
+              GlobalStyles.nearbyRestoBradius,
+              GlobalStyles.flexDiv,
+              GlobalStyles.centerY,
+            ]}
+          >
+            <View>
+              <Image
+                source={require("../../assets/pizzer.jpeg")}
+                style={[GlobalStyles.nearbyRestoBradius, GlobalStyles.image]}
+              />
+            </View>
+            <View>
+              <Text
+                style={[GlobalStyles.heavyWeight, GlobalStyles.textPadding]}
+              >
+                Choose Kigali
+              </Text>
+              <Text style={GlobalStyles.textPadding}>
+                World, African, Pizzeria, Coffee
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
 
-      <View style={[{ height: "20%" }, GlobalStyles.flexEnd]}>
+      <View style={[GlobalStyles.flexEnd]}>
         <View
           style={[
             GlobalStyles.centerDiv,
             GlobalStyles.flexDiv,
             GlobalStyles.iconDiv,
             GlobalStyles.whiteDiv,
+            { padding: 25 },
           ]}
         >
           <FontAwesome name="home" size={24} />
