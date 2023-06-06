@@ -17,27 +17,28 @@ export default class LoginScreen extends React.Component {
     super(props);
     this.state = {
       fontsLoaded: false,
-      email:"",
-      password:""
+      email: "",
+      password: "",
     };
   }
 
-  async login(){
+  async login() {
     try {
-      const email = this.state.email
-      const password = this.state.password
+      const email = this.state.email;
+      const password = this.state.password;
 
       let result = await fetch("http://10.0.2.2:4000/login/", {
-        method:"POST",
-        body:JSON.stringify({
-          email, password
+        method: "POST",
+        body: JSON.stringify({
+          email,
+          password,
         }),
-        headers:{"Content-Type":"application/json"}
-      })
+        headers: { "Content-Type": "application/json" },
+      });
 
       result = await result.json();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -83,7 +84,13 @@ export default class LoginScreen extends React.Component {
               <Text style={[GlobalStyles.welcome, GlobalStyles.boldFontFamily]}>
                 Welcome ...
               </Text>
-              <Text style={[GlobalStyles.subheader, GlobalStyles.grayText, GlobalStyles.appFontFamily]}>
+              <Text
+                style={[
+                  GlobalStyles.subheader,
+                  GlobalStyles.grayText,
+                  GlobalStyles.appFontFamily,
+                ]}
+              >
                 Sign in to continue
               </Text>
             </View>
@@ -92,41 +99,57 @@ export default class LoginScreen extends React.Component {
               <View style={GlobalStyles.formFields}>
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Your Email" onChangeText={(text)=> this.setState({email:text})}
+                  placeholder="Your Email"
+                  onChangeText={(text) => this.setState({ email: text })}
                 />
                 <TextInput
                   style={GlobalStyles.formField}
-                  placeholder="Password" onChangeText={(text)=>{this.setState({password
-                  :text})}}
+                  placeholder="Password"
+                  onChangeText={(text) => {
+                    this.setState({ password: text });
+                  }}
                 />
               </View>
 
-              <View style={[GlobalStyles.btn, GlobalStyles.btnPos]}>
+              <View style={[GlobalStyles.btn, GlobalStyles.btnPos, GlobalStyles.centerDiv]}>
                 <TouchableOpacity
                   style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
-                  color="#ec9706"
+                  
                   onPress={() => {
-                    this.login()
+                    this.login();
                   }}
                 >
-                  <Text style={[GlobalStyles.btnText, GlobalStyles.boldFontFamily, GlobalStyles.letterSpace]}>Sign in</Text>
+                  <Text
+                    style={[
+                      GlobalStyles.btnText,
+                      GlobalStyles.boldFontFamily,
+                      GlobalStyles.letterSpace,
+                      GlobalStyles.whiteText,
+                    ]}
+                  >
+                    Sign in
+                  </Text>
                 </TouchableOpacity>
               </View>
 
-              <View style={GlobalStyles.options}>
+              <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumTopMargin]}>
                 <View style={GlobalStyles.flexDiv}>
                   <View style={GlobalStyles.line}></View>
-                  <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily, GlobalStyles.mediumWeight]}>OR</Text>
+                  <Text
+                    style={[
+                      GlobalStyles.grayText,
+                      GlobalStyles.appFontFamily,
+                      GlobalStyles.mediumWeight,
+                    ]}
+                  >
+                    OR
+                  </Text>
                   <View style={[GlobalStyles.line, GlobalStyles.line2]}></View>
                 </View>
               </View>
             </View>
 
-            <View
-              style={[
-                GlobalStyles.btn,
-              ]}
-            >
+            <View style={[GlobalStyles.btn, GlobalStyles.centerDiv]}>
               <TouchableOpacity
                 style={[
                   GlobalStyles.socialBtn,
@@ -135,11 +158,11 @@ export default class LoginScreen extends React.Component {
                 ]}
               >
                 <View>
-                <FontAwesome
-                  name="google"
-                  size={24}
-                  style={GlobalStyles.icon}
-                />
+                  <FontAwesome
+                    name="google"
+                    size={24}
+                    style={GlobalStyles.icon}
+                  />
                 </View>
                 <Text>Login with Google</Text>
               </TouchableOpacity>
@@ -151,23 +174,38 @@ export default class LoginScreen extends React.Component {
                 ]}
               >
                 <View>
-                <FontAwesome
-                  name="facebook"
-                  size={24}
-                  style={GlobalStyles.icon}
-                />
+                  <FontAwesome
+                    name="facebook"
+                    size={24}
+                    style={GlobalStyles.icon}
+                  />
                 </View>
                 <Text>Login with Facebook</Text>
               </TouchableOpacity>
             </View>
 
             <View style={[GlobalStyles.centerDiv]}>
-              <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, { marginTop: 1 }]}>
+              <Text
+                style={[
+                  GlobalStyles.orangeColor,
+                  GlobalStyles.boldFontFamily,
+                ]}
+              >
                 Forgot password?
               </Text>
-              <View style={[GlobalStyles.flexDiv]}>
-                <Text style={[GlobalStyles.grayText, GlobalStyles.appFontFamily]}>Don't have an account?</Text>
-                <Text style={[GlobalStyles.orangeColor, GlobalStyles.boldFontFamily, {marginLeft:2}]}>
+              <View style={[GlobalStyles.flexDiv, GlobalStyles.centerDiv]}>
+                <Text
+                  style={[GlobalStyles.grayText, GlobalStyles.appFontFamily]}
+                >
+                  Don't have an account?
+                </Text>
+                <Text
+                  style={[
+                    GlobalStyles.orangeColor,
+                    GlobalStyles.boldFontFamily,
+                    { marginLeft: 2 },
+                  ]}
+                >
                   Register
                 </Text>
               </View>

@@ -5,8 +5,8 @@ import colors from "./colors";
 export const GlobalStyles = StyleSheet.create({
   appFontFamily: { fontFamily: "Poppins-Regular" },
   backDiv: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     borderRadius: 10,
   },
   backDivSpacing: { paddingBottom: 24 },
@@ -73,7 +73,6 @@ export const GlobalStyles = StyleSheet.create({
   },
   iconDiv: {
     justifyContent: "space-around",
-    height: 100,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -87,8 +86,8 @@ export const GlobalStyles = StyleSheet.create({
   },
 
   image: {
-    width: 90,
-    height: "90%",
+    width: 70,
+    height: "70%",
     marginRight: 12,
   },
   letterSpace: {
@@ -120,7 +119,7 @@ export const GlobalStyles = StyleSheet.create({
     paddingTop: 5,
   },
   loginDiv: {
-    height: "85%",
+    height: "90%",
     backgroundColor: colors.bright,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -139,11 +138,15 @@ export const GlobalStyles = StyleSheet.create({
     color: colors.black,
   },
   logoSize: { fontSize: 50 },
+  nearbyRestoPageLeftMargin: { marginLeft: 20 },
   mediumDiv: {
-    width: "90%",
+    width: "95%",
   },
-  mediumSize: {
-    fontSize: 15,
+  mediumFontSize: {
+    fontSize: 18,
+  },
+  mediumTopMargin: {
+    marginTop: 12,
   },
   mediumWeight: {
     fontWeight: "600",
@@ -152,8 +155,8 @@ export const GlobalStyles = StyleSheet.create({
     borderRadius: 20,
   },
   nearbyRestoDiv: {
-    height: 100,
-    marginBottom: 10,
+    height: 90,
+    // marginBottom: 10,
   },
   orangeBackground: {
     backgroundColor: colors.mainBckg,
@@ -163,11 +166,6 @@ export const GlobalStyles = StyleSheet.create({
   },
   orDiv: {
     flexDirection: "row",
-  },
-  options: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 16,
   },
   safeView: {
     marginTop: Platform.OS == "android" ? StatusBar.currentHeight : 10,
@@ -192,6 +190,9 @@ export const GlobalStyles = StyleSheet.create({
   shiftDiv: {
     bottom: 24,
   },
+  smallFontSize: {
+    fontSize: 18,
+  },
   socialBtn: {
     color: colors.secondaryDark,
     borderColor: colors.secondaryDark,
@@ -202,7 +203,7 @@ export const GlobalStyles = StyleSheet.create({
     marginTop: 24,
   },
   subheader: {
-    paddingBottom: 12,
+    paddingBottom: 8,
     color: colors.secondaryDark,
     fontSize: 18,
   },

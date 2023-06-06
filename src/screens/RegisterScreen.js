@@ -108,7 +108,7 @@ export default class Register extends React.Component {
                 />
               </View>
 
-              <View style={GlobalStyles.btn}>
+              <View style={[GlobalStyles.btn, GlobalStyles.centerDiv]}>
                 <TouchableOpacity
                   style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
@@ -121,6 +121,7 @@ export default class Register extends React.Component {
                       GlobalStyles.btnText,
                       GlobalStyles.boldFontFamily,
                       GlobalStyles.letterSpace,
+                      GlobalStyles.whiteText,
                     ]}
                   >
                     Proceed
@@ -128,7 +129,7 @@ export default class Register extends React.Component {
                 </TouchableOpacity>
               </View>
 
-              <View style={GlobalStyles.options}>
+              <View style={[GlobalStyles.centerDiv, GlobalStyles.mediumTopMargin]}>
                 <View style={GlobalStyles.orDiv}>
                   <View style={GlobalStyles.line}></View>
                   <Text>OR</Text>
@@ -137,7 +138,7 @@ export default class Register extends React.Component {
                 <Text
                   style={[
                     GlobalStyles.grayText,
-                    GlobalStyles.text,
+                    GlobalStyles.mediumTopMargin,
                     GlobalStyles.appFontFamily,
                     GlobalStyles.mediumWeight,
                   ]}
@@ -146,7 +147,7 @@ export default class Register extends React.Component {
                 </Text>
               </View>
 
-              <View style={GlobalStyles.btn}>
+              <View style={[GlobalStyles.btn, GlobalStyles.centerDiv]}>
                 <TouchableOpacity
                   style={[GlobalStyles.button, GlobalStyles.orangeBackground]}
                   color="#ec9706"
@@ -157,6 +158,7 @@ export default class Register extends React.Component {
                       GlobalStyles.btnText,
                       GlobalStyles.boldFontFamily,
                       GlobalStyles.letterSpace,
+                      GlobalStyles.whiteText,
                     ]}
                   >
                     Sign in
@@ -169,7 +171,7 @@ export default class Register extends React.Component {
                       GlobalStyles.grayText,
                       GlobalStyles.appFontFamily,
                       GlobalStyles.letterSpace,
-                      GlobalStyles.mediumSize,
+                      GlobalStyles.mediumFontSize,
                       GlobalStyles.mediumWeight,
                       GlobalStyles.littlePadding,
                     ]}
@@ -181,7 +183,7 @@ export default class Register extends React.Component {
                       GlobalStyles.orangeColor,
                       GlobalStyles.boldFontFamily,
                       GlobalStyles.letterSpace,
-                      GlobalStyles.mediumSize,
+                      GlobalStyles.smallFontSize,
                       GlobalStyles.littlePadding,
                       { marginLeft: 2 },
                     ]}
