@@ -20,7 +20,6 @@ export default function NearbyResto() {
           GlobalStyles.flexDiv,
           GlobalStyles.backDivSpacing,
           GlobalStyles.backDivBorder,
-          // { backgroundColor: "#456" },
         ]}
       >
         <View
@@ -47,7 +46,6 @@ export default function NearbyResto() {
         style={{
           height: "70%",
           justifyContent: "space-around",
-          backgroundColor: "#454",
         }}
       >
         <Text
@@ -149,12 +147,7 @@ export default function NearbyResto() {
         </View>
       </View>
 
-      <View
-        style={[
-          GlobalStyles.flexEnd,
-          //  {  backgroundColor:'#456' }
-        ]}
-      >
+      <View style={[GlobalStyles.flexEnd]}>
         <View
           style={[
             GlobalStyles.centerDiv,
